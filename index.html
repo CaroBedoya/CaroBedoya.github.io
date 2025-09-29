@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carolina Bedoya — Portafolio Profesional</title>
+  <meta name="description" content="Frontend & No-Code Developer | Automatizo procesos con MERN & AppSheet | Gestión de Negocios">
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#121936;
+      --card:#151e3f;
+      --text:#e8ecf8;
+      --muted:#aab3cf;
+      --brand:#6ea8fe;
+      --brand-2:#ffd166;
+      --shadow: 0 10px 25px rgba(0,0,0,.25);
+      --radius: 16px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block;border-radius:var(--radius)}
+    .wrap{max-width:var(--max);margin:auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,16,32,.7);z-index:20;border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.4px}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--brand-2)}
+    .links a{margin-left:18px;color:var(--muted)}
+    .links a:hover{color:var(--text)}
+
+    .hero{padding:72px 0 36px;background:linear-gradient(180deg, rgba(110,168,254,.15), transparent 55%), linear-gradient(0deg, rgba(255,209,102,.08), transparent 35%)}
+    .hero_grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    @media (max-width:900px){.hero_grid{grid-template-columns:1fr}}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.18;margin:0 0 10px}
+    .lead{color:var(--muted);max-width:60ch}
+    .tag{display:inline-block;padding:6px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;color:var(--muted);font-size:14px}
+    .hero-photo{border-radius:50%;box-shadow:var(--shadow);max-width:240px;margin:auto}
+
+    section{padding:42px 0}
+    h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    .btn{display:inline-block;background:var(--brand);color:#0b1020;font-weight:600;border:none;border-radius:10px;padding:10px 14px}
+    .btn:hover{text-decoration:none;filter:brightness(1.08)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand"><span class="dot"></span> Carolina Bedoya</div>
+        <div class="links">
+          <a href="#perfil">Perfil</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero_grid">
+        <div>
+          <span class="tag">Frontend & No-Code Developer | Automatizo procesos con MERN & AppSheet | Gestión de Negocios</span>
+          <h1>Transformo ideas en soluciones digitales prácticas y fáciles de usar</h1>
+          <p class="lead">10+ años de experiencia en gestión de negocios y servicio al cliente. Ahora uno esa visión con tecnología para optimizar procesos y crear experiencias digitales que realmente funcionan.</p>
+          <a class="btn" href="#proyectos">Ver proyectos</a>
+        </div>
+        <div>
+          <img src="cc0b7087-c9ec-4552-8278-c37e8c32217b.jpg" alt="Foto profesional de Carolina Bedoya" class="hero-photo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="perfil">
+      <div class="wrap">
+        <h2>Perfil Profesional</h2>
+        <div class="card">
+          <p>Administradora Turística con más de 10 años en gestión de negocios y atención al cliente. Desarrolladora Full Stack (MERN) y AppSheet Developer, especializada en digitalizar procesos, optimizar operaciones y crear interfaces claras y accesibles. Mi diferenciador es entender el negocio desde dentro y traducirlo a soluciones digitales efectivas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" style="background:linear-gradient(180deg, transparent, rgba(255,209,102,.06))">
+      <div class="wrap">
+        <h2>Contacto</h2>
+        <div class="card">
+          <p class="lead">¿Quieres conversar sobre un proyecto o colaboración?</p>
+          <p>Escríbeme: <a href="mailto:jennycaritobedoya@gmail.com">jennycaritobedoya@gmail.com</a> · 
+             <a href="https://www.linkedin.com/in/carolina-bedoya-34aa902a6" target="_blank">LinkedIn</a> · 
+             <a href="https://github.com/CaroBedoya" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y"></span> Carolina Bedoya</div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
