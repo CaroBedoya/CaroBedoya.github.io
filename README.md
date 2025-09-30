@@ -34,12 +34,12 @@ Aquí presento mis proyectos, experiencia y trayectoria profesional como:
 
 ---
 
-## 👩‍💼 Contacto
+## Contacto
 ¿Quieres conversar sobre un proyecto o colaboración?  
 
-✉️ **Email:** [jennycaritobedoya@gmail.com](mailto:jennycaritobedoya@gmail.com)  
-💼 **LinkedIn:** [Carolina Bedoya](https://www.linkedin.com/in/carolina-bedoya-m/)  
-💻 **GitHub:** [CaroBedoya](https://github.com/CaroBedoya)
+**Email:** [jennycaritobedoya@gmail.com](mailto:jennycaritobedoya@gmail.com)  
+**LinkedIn:** [Carolina Bedoya](https://www.linkedin.com/in/carolina-bedoya-m/)  
+**GitHub:** [CaroBedoya](https://github.com/CaroBedoya)
 
 ---
 
