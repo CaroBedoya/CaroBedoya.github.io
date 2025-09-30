@@ -24,13 +24,17 @@
     a:hover{text-decoration:underline}
     img{max-width:100%;display:block;border-radius:var(--radius)}
     .wrap{max-width:var(--max);margin:auto;padding:0 20px}
+
+    /* Header */
     header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,16,32,.7);z-index:20;border-bottom:1px solid rgba(255,255,255,.06)}
     nav{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.4px}
     .dot{width:10px;height:10px;border-radius:50%;background:var(--brand-2)}
     .links a{margin-left:18px;color:var(--muted)}
     .links a:hover{color:var(--text)}
+    .links a.active{color:var(--brand)}
 
+    /* Hero */
     .hero{padding:72px 0 36px;background:linear-gradient(180deg, rgba(110,168,254,.15), transparent 55%), linear-gradient(0deg, rgba(255,209,102,.08), transparent 35%)}
     .hero_grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
     @media (max-width:900px){.hero_grid{grid-template-columns:1fr}}
@@ -39,13 +43,30 @@
     .tag{display:inline-block;padding:6px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;color:var(--muted);font-size:14px}
     .hero-photo{border-radius:50%;box-shadow:var(--shadow);max-width:240px;margin:auto}
 
-    section{padding:42px 0}
+    /* Sections */
+    section{padding:42px 0; scroll-margin-top:96px;}
     h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 18px}
     .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
 
-    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    /* Grid cards (Proyectos) */
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card h3{margin:0 0 8px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px;padding:0;list-style:none}
+    .tags li{padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:12px;color:var(--muted)}
     .btn{display:inline-block;background:var(--brand);color:#0b1020;font-weight:600;border:none;border-radius:10px;padding:10px 14px}
     .btn:hover{text-decoration:none;filter:brightness(1.08)}
+
+    /* Timeline (Experiencia) */
+    .timeline{display:grid;gap:16px}
+    .timeline .item{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .timeline .item h3{margin:0 0 6px}
+    .when{font-size:13px;color:var(--muted);font-weight:500}
+    .bullets{margin:8px 0 0 18px}
+    .bullets li{margin:6px 0}
+
+    /* Footer */
+    footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
   </style>
 </head>
 <body>
@@ -64,7 +85,8 @@
   </header>
 
   <main>
-    <section class="hero">
+    <!-- HERO con id=perfil -->
+    <section id="perfil" class="hero">
       <div class="wrap hero_grid">
         <div>
           <span class="tag">Frontend & No-Code Developer | Automatizo procesos con MERN & AppSheet | Gestión de Negocios</span>
@@ -78,7 +100,8 @@
       </div>
     </section>
 
-    <section id="perfil">
+    <!-- Perfil profesional -->
+    <section>
       <div class="wrap">
         <h2>Perfil Profesional</h2>
         <div class="card">
@@ -87,6 +110,76 @@
       </div>
     </section>
 
+    <!-- Proyectos -->
+    <section id="proyectos">
+      <div class="wrap">
+        <h2>Proyectos</h2>
+        <p class="lead">Selección de proyectos recientes.</p>
+
+        <div class="grid">
+          <!-- Proyecto 1 -->
+          <article class="card">
+            <h3>Around the U.S. · MERN</h3>
+            <p>CRUD de tarjetas (imágenes/likes), autenticación JWT y API REST en Node/Express con MongoDB.</p>
+            <ul class="tags"><li>React</li><li>Node</li><li>Express</li><li>MongoDB</li><li>JWT</li></ul>
+            <a class="btn" href="https://github.com/CaroBedoya/web_project_api_full" target="_blank" rel="noopener">Repositorio</a>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="card">
+            <h3>Explorador de Razas de Perros</h3>
+            <p>Galería en React que consume API externa para listar y filtrar razas de perros con imágenes.</p>
+            <ul class="tags"><li>React</li><li>Vite</li><li>REST API</li></ul>
+            <a class="btn" href="https://github.com/CaroBedoya/explorador-perros-frontend" target="_blank" rel="noopener">Repositorio</a>
+          </article>
+
+          <!-- Proyecto 3 (AppSheet) -->
+          <article class="card">
+            <h3>Suite AppSheet · Gestión Ganadera</h3>
+            <p>Apps no-code para inventario, rotación de potreros y costos. Integración con Google Sheets.</p>
+            <ul class="tags"><li>AppSheet</li><li>Google Sheets</li><li>No-Code</li></ul>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia">
+      <div class="wrap">
+        <h2>Experiencia</h2>
+
+        <div class="timeline">
+          <div class="item">
+            <h3>Freelance · AppSheet Developer <span class="when">2025 – Actualidad</span></h3>
+            <p>Diseño de apps no-code para optimizar procesos (ganadería, salud ocupacional, academia de música).</p>
+            <ul class="bullets">
+              <li>Reducción de registros manuales ~40% en operación ganadera.</li>
+              <li>Automatización de matrículas, pagos y asistencia.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Propietaria · Almacén de Ropa y Accesorios <span class="when">2017 – 2021</span></h3>
+            <p>Gestión integral del negocio: finanzas, personal, proveedores y marketing.</p>
+            <ul class="bullets">
+              <li>Reposicionamiento del concepto y mejora de la experiencia en tienda.</li>
+              <li>Canales digitales (Facebook e Instagram) para captación y fidelización.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Propietaria · Accesorios y Tapizados de Motos <span class="when">2015 – 2017</span></h3>
+            <p>Apertura desde cero: red de proveedores/clientes, inventarios y finanzas.</p>
+            <ul class="bullets">
+              <li>Diseño y producción de calcomanías personalizadas (plotter de corte).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
     <section id="contacto" style="background:linear-gradient(180deg, transparent, rgba(255,209,102,.06))">
       <div class="wrap">
         <h2>Contacto</h2>
@@ -104,6 +197,30 @@
     <div class="wrap">© <span id="y"></span> Carolina Bedoya</div>
   </footer>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+  
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, '', id);
+        }
+      });
+    });
+
+    const sections = [...document.querySelectorAll('section')].filter(s => s.id);
+    const links = [...document.querySelectorAll('.links a')];
+
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY + 120;
+      let current = sections[0]?.id;
+      sections.forEach(s => { if (s.offsetTop <= y) current = s.id; });
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+    });
+  </script>
 </body>
 </html>
